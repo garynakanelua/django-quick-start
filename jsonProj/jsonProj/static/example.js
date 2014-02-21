@@ -1,0 +1,1 @@
+alert("I'm a static javascript file!");

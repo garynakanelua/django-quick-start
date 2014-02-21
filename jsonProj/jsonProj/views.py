@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render_to_response #used for templates
+from django.shortcuts import render #used for templates
 from django.utils import simplejson #useed to basic json work
 import urllib
 import json
@@ -23,4 +23,4 @@ def getHeadlines(request):
 	for item in js_object['headlines']:
 		headlines.append(item['headline'])
 
-	return render_to_response('index.html', {"data": simplejson.dumps(headlines)})
+	return render(request, 'index.html', {"data": simplejson.dumps(headlines)})
