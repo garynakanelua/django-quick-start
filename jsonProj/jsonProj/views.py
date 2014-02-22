@@ -23,4 +23,4 @@ def getHeadlines(request):
 	for item in js_object['headlines']:
 		headlines.append(item['headline'])
 
-	return render(request, 'index.html', {"data": simplejson.dumps(headlines)})
+	return render(request, 'index.html', {'data': json.dumps(json.dumps(headlines))})
